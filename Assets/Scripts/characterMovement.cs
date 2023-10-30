@@ -8,12 +8,20 @@ public class characterMovement : MonoBehaviour
 	public float MoveSpeed;
 	public float Gravity = -9.8f;
 	public float JumpSpeed;
+	private bool sprint = false;
 
 	public float verticalSpeed;
 
 	private void Update()
 	{
 		//handles x/z axes movement
+		if(sprint == false && Input.GetButtonDown("Sprint")){
+			MoveSpeed = MoveSpeed * 2;
+			sprint = true;
+		}else if(sprint == true && Input.GetButtonUp("Sprint")){
+			MoveSpeed = MoveSpeed / 2;
+			sprint = false;
+		}
 		Vector3 movement = Vector3.zero;
 		float forwardMovement = Input.GetAxisRaw("Vertical") * MoveSpeed * Time.deltaTime;
 		float sideMovement = Input.GetAxisRaw("Horizontal") * MoveSpeed * Time.deltaTime;

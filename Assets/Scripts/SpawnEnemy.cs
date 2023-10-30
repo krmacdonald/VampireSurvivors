@@ -8,7 +8,7 @@ public class SpawnEnemy : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // casting a ray
+        if (Input.GetButtonDown("Interact")) // casting a ray
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

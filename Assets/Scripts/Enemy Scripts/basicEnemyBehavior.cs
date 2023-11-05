@@ -11,20 +11,23 @@ public class basicEnemyBehavior : MonoBehaviour
     public float repentanceOnKill;
     public GameObject player;
     [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private Transform target;
 
     // Start is called before the first frame update
     void Start()
     {
-    
+        foreach(Transform t in transform)
+        {
+            t.gameObject.tag = "Enemy";
+        }
+        gameObject.tag = "Enemy";
     }
 
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(target.position);
+        agent.SetDestination(player.transform.position);
     }
-    public void takeDamage(int playerDamage)
+    public void takeDamage(float playerDamage)
     {
         this.enemyHealth -= playerDamage;
         if(this.enemyHealth <= 0){
@@ -34,6 +37,6 @@ public class basicEnemyBehavior : MonoBehaviour
 
     public void handleDeath()
     {
-
+        Destroy(this.gameObject);
     }
 }

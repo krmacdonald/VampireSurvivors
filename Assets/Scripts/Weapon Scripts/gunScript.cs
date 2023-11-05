@@ -5,8 +5,11 @@ using UnityEngine;
 public class gunScript : MonoBehaviour
 {
     public Transform camTransform;
-    public int gunDamage;
-    public int gunFirerate;
+    public float gunDamage;
+    public float gunFirerate;
+    public int magazine;
+    public float reloadSpeed;
+    private basicEnemyBehavior enemyScript;
 
     // Update is called once per frame
     void Update()
@@ -18,7 +21,8 @@ public class gunScript : MonoBehaviour
             {
                 if (rayHit.collider.gameObject.tag == "Enemy")
                 {
-                    Destroy(rayHit.collider.gameObject); //destroys enemy when raycast hit
+                    enemyScript = rayHit.collider.gameObject.GetComponent<basicEnemyBehavior>(); //grabs the enemy's script
+                    enemyScript.takeDamage(gunDamage); //broadcasts gundamage to enemy's takedamage method
                 }
             }
         }

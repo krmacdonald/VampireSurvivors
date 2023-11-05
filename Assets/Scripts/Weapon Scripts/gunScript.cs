@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine.Playables;
 using UnityEngine;
 
+/*
+ * Last edited by Kyle 11/5/23
+ * Prerequisites
+ *  - A timeline director attached to the gun that handles the gun's muzzle flash
+ *  - Stats set up in the editor
+ *  - Gun is the child of the player prefab
+ */
+
 public class gunScript : MonoBehaviour
 {
     public Transform camTransform;
@@ -12,8 +20,13 @@ public class gunScript : MonoBehaviour
     public int magazine;
     public float reloadSpeed;
     private basicEnemyBehavior enemyScript;
+    private playerLifeManager playerLife;
     public PlayableDirector director;
 
+    void Start()
+    {
+        playerLife = GameObject.Find("Player").GetComponent<playerLifeManager>(); //Gets the health manager
+    }
     // Update is called once per frame
     void Update()
     {
@@ -22,16 +35,16 @@ public class gunScript : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0)) //m1 detection
             {
-                director.Stop();
+                director.Stop(); //stops current timeline if still playing
                 director.Play(); //creates muzzle flash
                 RaycastHit rayHit; //sends out raycast
-                Shake(3f, 5f);
+                Shake(3f, 5f); //camera shake (not functional)
                 if (Physics.Raycast(camTransform.position, camTransform.forward, out rayHit)) 
                 {
                     if (rayHit.collider.gameObject.tag == "Enemy")
                     {
                         enemyScript = rayHit.collider.gameObject.GetComponent<basicEnemyBehavior>(); //grabs the enemy's script
-                        enemyScript.takeDamage(gunDamage); //broadcasts gundamage to enemy's takedamage method
+                        playerLife.addRepentance(enemyScript.takeDamage(gunDamage)); //broadcasts gundamage to enemy's takedamage method, returns repentance
                     }
                 }
             }

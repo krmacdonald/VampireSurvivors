@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Last edited by Kyle 11/5/23
+ * Prerequisites
+ *  - Attached to the prefab named "Player"
+ */
+
 public class playerLifeManager : MonoBehaviour
 {
     public float health;
     public float repentance;
+    public float repentanceDecay; //reccomended to be ~10/15
+    private float decayTimer;
     private float regeneration;
 
     // Start is called before the first frame update
@@ -17,7 +25,16 @@ public class playerLifeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        decayTimer += Time.deltaTime;
+        if(decayTimer >= repentanceDecay)
+        {
+            repentance -= 5;
+            if(repentance < 0)
+            {
+                repentance = 0;
+            }
+            decayTimer = 5;
+        }
     }
 
     //handles the regeneration of health based on repentace value using switch case
@@ -25,7 +42,9 @@ public class playerLifeManager : MonoBehaviour
     {
         switch (repentance)
         {
-
+            case var expression when (repentance >= 0 && repentance < 10):
+                Debug.Log("wow");
+                break;
         }
     }
 
@@ -55,8 +74,13 @@ public class playerLifeManager : MonoBehaviour
 
     }
 
-    public void addRepentance()
+    public void addRepentance(float repentanceAdded)
     {
-
+        repentance += repentanceAdded;
+        if(repentance > 100)
+        {
+            repentance = 100;
+        }
+        decayTimer = 0; //resets counter for decay
     }
 }

@@ -58,9 +58,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 3
   enemyDamage: 1
-  repentanceOnShot: 1
-  repentanceOnKill: 1
-  player: {fileID: 0}
+  repentanceOnShot: 5
+  repentanceOnKill: 10
+  player: {fileID: 8891981078206498164, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
   agent: {fileID: 8337740766793111199}
 --- !u!195 &8337740766793111199
 NavMeshAgent:

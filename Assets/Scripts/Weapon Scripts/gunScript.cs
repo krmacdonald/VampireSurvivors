@@ -37,6 +37,7 @@ public class gunScript : MonoBehaviour
             {
                 director.Stop(); //stops current timeline if still playing
                 director.Play(); //creates muzzle flash
+                Debug.Log("playing director");
                 RaycastHit rayHit; //sends out raycast
                 Shake(3f, 5f); //camera shake (not functional)
                 if (Physics.Raycast(camTransform.position, camTransform.forward, out rayHit)) 

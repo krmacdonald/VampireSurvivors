@@ -22,6 +22,7 @@ public class gunScript : MonoBehaviour
     private basicEnemyBehavior enemyScript;
     public playerLifeManager playerLife;
     public PlayableDirector director;
+    public PlayableDirector crosshairDirector;
 
     void Start()
     {
@@ -38,13 +39,15 @@ public class gunScript : MonoBehaviour
             {
                 gunDelay = 0;
                 director.Stop(); //stops current timeline if still playing
-                director.Play(); //creates muzzle flash
+                director.Play(); //creates muzzle 
                 RaycastHit rayHit; //sends out raycast
                 Shake(3f, 5f); //camera shake (not functional)
                 if (Physics.Raycast(camTransform.position, camTransform.forward, out rayHit)) 
                 {
                     if (rayHit.collider.gameObject.tag == "Enemy")
                     {
+                        crosshairDirector.Stop();
+                        crosshairDirector.Play();
                         enemyScript = rayHit.collider.gameObject.GetComponent<basicEnemyBehavior>(); //grabs the enemy's script
                         playerLife.addRepentance(enemyScript.takeDamage(gunDamage)); //broadcasts gundamage to enemy's takedamage method, returns repentance
                     }

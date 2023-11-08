@@ -20,12 +20,12 @@ public class gunScript : MonoBehaviour
     public int magazine;
     public float reloadSpeed;
     private basicEnemyBehavior enemyScript;
-    private playerLifeManager playerLife;
+    public playerLifeManager playerLife;
     public PlayableDirector director;
 
     void Start()
     {
-        playerLife = GameObject.Find("Player").GetComponent<playerLifeManager>(); //Gets the health manager
+
     }
     // Update is called once per frame
     void Update()

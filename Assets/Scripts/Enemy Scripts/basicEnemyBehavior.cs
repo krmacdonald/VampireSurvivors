@@ -17,6 +17,8 @@ public class basicEnemyBehavior : MonoBehaviour
     public float repentanceOnShot;
     public float repentanceOnKill;
     private float totalRepentance;
+    private float attackCooldown;
+    private float attackCDCounter;
     public GameObject player;
     [SerializeField] private NavMeshAgent agent;
 
@@ -33,7 +35,10 @@ public class basicEnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(player.transform.position);
+        if (Vector3.Distance(transform.position, player.transform.position) <= 45f && attackCDCounter >= attackCooldown)
+        {
+            agent.SetDestination(player.transform.position);
+        }
     }
 
     //Causes the enemy to take damage, returns repentance value to the player.

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 /*
- * Last edited by Kyle 11/5/23
+ * Last edited by Kyle 11/8/23
  * Prerequisites
  *  - NavMeshAgent attached to enemy
  *  - Main object with collider tagged as "Enemy"

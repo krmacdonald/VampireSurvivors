@@ -20,24 +20,25 @@ public class gunScript : MonoBehaviour
     public int magazine;
     public float reloadSpeed;
     private basicEnemyBehavior enemyScript;
-    private playerLifeManager playerLife;
+    public playerLifeManager playerLife;
     public PlayableDirector director;
 
     void Start()
     {
-        playerLife = GameObject.Find("Player").GetComponent<playerLifeManager>(); //Gets the health manager
+
     }
     // Update is called once per frame
     void Update()
     {
         
-        if (gunDelay > gunFirerate) //Checks if gun is ready to fire
+        
+        if (Input.GetMouseButtonDown(0)) //m1 detection
         {
-            if (Input.GetMouseButtonDown(0)) //m1 detection
+            if (gunDelay > gunFirerate) //Checks if gun is ready to fire
             {
+                gunDelay = 0;
                 director.Stop(); //stops current timeline if still playing
                 director.Play(); //creates muzzle flash
-                Debug.Log("playing director");
                 RaycastHit rayHit; //sends out raycast
                 Shake(3f, 5f); //camera shake (not functional)
                 if (Physics.Raycast(camTransform.position, camTransform.forward, out rayHit)) 
@@ -50,10 +51,8 @@ public class gunScript : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            gunDelay += Time.deltaTime;
-        }
+        gunDelay += Time.deltaTime;
+
     }
 
     //Handles camera shake

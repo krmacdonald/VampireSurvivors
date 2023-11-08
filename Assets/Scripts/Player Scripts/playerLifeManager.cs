@@ -33,8 +33,9 @@ public class playerLifeManager : MonoBehaviour
             {
                 repentance = 0;
             }
-            decayTimer = 5;
+            decayTimer = 4;
         }
+        //repentanceRegen();
     }
 
     //handles the regeneration of health based on repentace value using switch case
@@ -76,6 +77,7 @@ public class playerLifeManager : MonoBehaviour
 
     public void addRepentance(float repentanceAdded)
     {
+        Debug.Log("Adding " + repentanceAdded);
         repentance += repentanceAdded;
         if(repentance > 100)
         {

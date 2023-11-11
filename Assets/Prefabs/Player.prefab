@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4390372059651048034}
   - component: {fileID: 2048116951943501611}
   - component: {fileID: 7120720795313156604}
+  - component: {fileID: 4171998704942080032}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -93,6 +94,29 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621779070828700918}
   m_Enabled: 1
+--- !u!114 &4171998704942080032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621779070828700918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433faa8b758afed4f9295b193c697276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PixelationFactor: 1
+  _ColorEmulationMode: 3
+  _FullscreenColorDepth: {x: 256, y: 256, z: 256}
+  _FullscreenDitherDepth: {x: 32, y: 32, z: 32}
+  _DitheringMatrixSize: 2
+  _DitheringScale: 1
+  _InterlacingSize: 1
+  _PostProcessShader: {fileID: 4800000, guid: 56d52fd5b7c6911468179e5a7359ce0e, type: 3}
+  _PostProcessShaderAccurate: {fileID: 4800000, guid: 2ebed186567d3c244a87538744a62920, type: 3}
+  _PixelationShader: {fileID: 4800000, guid: f2da0e2a14a532548b5db043244b3df1, type: 3}
+  _InterlacingShader: {fileID: 4800000, guid: 03ebd34214b41ef459d7ee6753b062be, type: 3}
 --- !u!1 &2834433953531406025
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,59 +148,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2218890517032678736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4311273029792646571
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5859903845099765229}
-  - component: {fileID: 2263324153612484872}
-  m_Layer: 0
-  m_Name: TIMELINE MANAGER
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5859903845099765229
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4311273029792646571}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9383948, y: 0.58365405, z: -0.3504696}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6316961262860753512}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &2263324153612484872
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4311273029792646571}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: ffb7263537673ce429df05e09f2e4407, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: -2821963991501189345, guid: ffb7263537673ce429df05e09f2e4407, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -2053380829848135794, guid: ffb7263537673ce429df05e09f2e4407, type: 2}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &4572841304997217021
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +269,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4390372059651048034}
-  - {fileID: 5859903845099765229}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &779730296026040665
@@ -445,7 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   repentance: 0
-  repentanceDecay: 0
+  repentanceDecay: 5
 --- !u!1001 &1819925210766922427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -581,7 +551,7 @@ MonoBehaviour:
   gunFirerate: 0.6
   magazine: 6
   reloadSpeed: 3
-  playerLife: {fileID: 0}
+  playerLife: {fileID: 6225092209497564134}
   director: {fileID: 43830090782413611}
   crosshairDirector: {fileID: 0}
 --- !u!320 &43830090782413611

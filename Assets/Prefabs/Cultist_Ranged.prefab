@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 8226410226907242596}
   m_Layer: 0
   m_Name: Cultist_Ranged
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -887,9 +887,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 3
-  enemyDamage: 1
+  enemyDamage: 5
   repentanceOnShot: 5
   repentanceOnKill: 10
+  attackCooldown: 3
   player: {fileID: 0}
   agent: {fileID: 3352438694162081834}
 --- !u!195 &3352438694162081834

@@ -17,14 +17,16 @@ public class basicEnemyBehavior : MonoBehaviour
     public float repentanceOnShot;
     public float repentanceOnKill;
     private float totalRepentance;
-    private float attackCooldown;
+    public float attackCooldown;
     private float attackCDCounter;
     public GameObject player;
+    private playerLifeManager playerLife;
     [SerializeField] private NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         foreach(Transform t in transform)
         {
             t.gameObject.tag = "Enemy";
@@ -39,6 +41,12 @@ public class basicEnemyBehavior : MonoBehaviour
         {
             agent.SetDestination(player.transform.position);
         }
+        if(Vector3.Distance(transform.position, player.transform.position) <= 3f && attackCDCounter >= attackCooldown)
+        {
+            attackPlayer();
+            attackCDCounter = 0;
+        }
+        attackCDCounter += Time.deltaTime;
     }
 
     //Causes the enemy to take damage, returns repentance value to the player.
@@ -52,6 +60,13 @@ public class basicEnemyBehavior : MonoBehaviour
             handleDeath();
         }
         return totalRepentance;
+    }
+
+    public void attackPlayer()
+    {
+        playerLife = player.GetComponent<playerLifeManager>();
+        playerLife.takeDamage(enemyDamage);
+
     }
 
     public void handleDeath()

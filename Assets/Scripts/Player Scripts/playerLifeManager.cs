@@ -65,6 +65,7 @@ public class playerLifeManager : MonoBehaviour
         health -= damageTaken;
         if (health < 0)
         {
+            health = 0;
             handleDeath();
         }
     }

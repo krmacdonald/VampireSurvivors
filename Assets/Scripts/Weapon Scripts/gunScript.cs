@@ -23,6 +23,8 @@ public class gunScript : MonoBehaviour
     public playerLifeManager playerLife;
     public PlayableDirector director;
     public PlayableDirector crosshairDirector;
+    public GameObject invisibleBulletTrail;
+    public GameObject bulletTrail;
 
     void Start()
     {
@@ -42,6 +44,7 @@ public class gunScript : MonoBehaviour
                 director.Play(); //creates muzzle 
                 RaycastHit rayHit; //sends out raycast
                 Shake(3f, 5f); //camera shake (not functional)
+                Instantiate(bulletTrail, invisibleBulletTrail.transform.position, invisibleBulletTrail.transform.rotation);
                 if (Physics.Raycast(camTransform.position, camTransform.forward, out rayHit)) 
                 {
                     if (rayHit.collider.gameObject.tag == "Enemy")

@@ -22,10 +22,12 @@ public class basicEnemyBehavior : MonoBehaviour
     public GameObject player;
     private playerLifeManager playerLife;
     [SerializeField] private NavMeshAgent agent;
+    AudioSource m_shootingssound;
 
     // Start is called before the first frame update
     void Start()
     {
+        m_shootingssound = GetComponent<AudioSource>();
         player = GameObject.Find("Player");
         foreach(Transform t in transform)
         {
@@ -52,6 +54,7 @@ public class basicEnemyBehavior : MonoBehaviour
     //Causes the enemy to take damage, returns repentance value to the player.
     public float takeDamage(float playerDamage)
     {
+        m_shootingssound.Play();
         totalRepentance = 0;
         this.enemyHealth -= playerDamage;
         totalRepentance += repentanceOnShot;

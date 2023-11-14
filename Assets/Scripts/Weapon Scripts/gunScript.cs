@@ -25,10 +25,11 @@ public class gunScript : MonoBehaviour
     public PlayableDirector crosshairDirector;
     public GameObject invisibleBulletTrail;
     public GameObject bulletTrail;
+    AudioSource m_shootingsound;
 
     void Start()
     {
-
+        m_shootingsound = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
@@ -39,6 +40,7 @@ public class gunScript : MonoBehaviour
         {
             if (gunDelay > gunFirerate) //Checks if gun is ready to fire
             {
+                m_shootingsound.Play();
                 gunDelay = 0;
                 director.Stop(); //stops current timeline if still playing
                 director.Play(); //creates muzzle 

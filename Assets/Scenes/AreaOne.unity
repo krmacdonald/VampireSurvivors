@@ -1294,6 +1294,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f71c6a28e99d1894ea6c6167cf7da3db, type: 3}
+--- !u!1 &1588039660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7310715226546300748, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}
+  m_PrefabInstance: {fileID: 2063466065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1638483754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8681714285594102107, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
@@ -1846,9 +1851,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5443495014258183976, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}
+      propertyPath: crossMask
+      value: 
+      objectReference: {fileID: 1588039660}
+    - target: {fileID: 5443495014258183976, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}
       propertyPath: lifeScript
       value: 
       objectReference: {fileID: 437349495}
+    - target: {fileID: 6856086906895199188, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6917150826295995423, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}
       propertyPath: m_Name
       value: NEW HUD
@@ -1866,7 +1879,8 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2550895692103890296, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}

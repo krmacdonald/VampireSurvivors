@@ -24,6 +24,7 @@ public class basicEnemyBehavior : MonoBehaviour
     private Quaternion bloodRotate;
     private Vector3 bloodPos;
     private playerLifeManager playerLife;
+    private winConditionCounter winCounter;
     [SerializeField] private NavMeshAgent agent;
     AudioSource m_shootingssound;
 
@@ -32,6 +33,7 @@ public class basicEnemyBehavior : MonoBehaviour
     {
         m_shootingssound = GetComponent<AudioSource>();
         player = GameObject.Find("Player");
+        winCounter = GameObject.Find("Win Manager").GetComponent<winConditionCounter>();
         foreach(Transform t in transform)
         {
             t.gameObject.tag = "Enemy";
@@ -80,6 +82,7 @@ public class basicEnemyBehavior : MonoBehaviour
 
     public void handleDeath()
     {
+        winCounter.addEnemies(1);
         bloodPos = this.transform.position;
         bloodRotate = this.transform.rotation;
         Instantiate(blood, bloodPos, bloodRotate);

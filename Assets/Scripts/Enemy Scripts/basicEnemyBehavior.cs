@@ -20,6 +20,9 @@ public class basicEnemyBehavior : MonoBehaviour
     public float attackCooldown;
     private float attackCDCounter;
     public GameObject player;
+    public GameObject blood;
+    private Quaternion bloodRotate;
+    private Vector3 bloodPos;
     private playerLifeManager playerLife;
     [SerializeField] private NavMeshAgent agent;
     AudioSource m_shootingssound;
@@ -54,7 +57,10 @@ public class basicEnemyBehavior : MonoBehaviour
     //Causes the enemy to take damage, returns repentance value to the player.
     public float takeDamage(float playerDamage)
     {
-        m_shootingssound.Play();
+        if((int)Random.Range(1,4) == 2)
+        {
+            m_shootingssound.Play();
+        }
         totalRepentance = 0;
         this.enemyHealth -= playerDamage;
         totalRepentance += repentanceOnShot;
@@ -74,6 +80,9 @@ public class basicEnemyBehavior : MonoBehaviour
 
     public void handleDeath()
     {
+        bloodPos = this.transform.position;
+        bloodRotate = this.transform.rotation;
+        Instantiate(blood, bloodPos, bloodRotate);
         Destroy(this.gameObject);
     }
 }

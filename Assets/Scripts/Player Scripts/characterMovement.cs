@@ -41,6 +41,12 @@ public class characterMovement : MonoBehaviour
 
 		//moves the character controller
 		CC.Move(movement);
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+			Debug.Log("quitting");
+		}
 	}
 	private void OnTriggerEnter(Collider other){
 		//reserved for pickups

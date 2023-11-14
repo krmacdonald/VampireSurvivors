@@ -14,6 +14,8 @@ public class playerLifeManager : MonoBehaviour
     public float repentance;
     public float repentanceDecay; //reccomended to be ~10/15
     private float decayTimer;
+    public float healthRegen;
+    private float healthRegenTimer;
     private float regeneration;
 
     // Start is called before the first frame update
@@ -25,6 +27,7 @@ public class playerLifeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthRegenTimer += Time.deltaTime;
         decayTimer += Time.deltaTime;
         if(decayTimer >= repentanceDecay)
         {
@@ -35,7 +38,16 @@ public class playerLifeManager : MonoBehaviour
             }
             decayTimer = 4;
         }
-        //repentanceRegen();
+
+        if(healthRegenTimer >= healthRegen)
+        {
+            repentanceRegen();
+            healthRegenTimer = 0;
+        }
+        if(health > 100)
+        {
+            health = 100;
+        }
     }
 
     //handles the regeneration of health based on repentace value using switch case
@@ -44,7 +56,34 @@ public class playerLifeManager : MonoBehaviour
         switch (repentance)
         {
             case var expression when (repentance >= 0 && repentance < 10):
-                Debug.Log("wow");
+                health += 0;
+                break;
+            case var expression when (repentance >= 10 && repentance < 20):
+                health += 1;
+                break;
+            case var expression when (repentance >= 20 && repentance < 30):
+                health += 2;
+                break;
+            case var expression when (repentance >= 30 && repentance < 40):
+                health += 3;
+                break;
+            case var expression when (repentance >= 40 && repentance < 50):
+                health += 4;
+                break;
+            case var expression when (repentance >= 50 && repentance < 60):
+                health += 5;
+                break;
+            case var expression when (repentance >= 60 && repentance < 70):
+                health += 6;
+                break;
+            case var expression when (repentance >= 70 && repentance < 80):
+                health += 7;
+                break;
+            case var expression when (repentance >= 80 && repentance < 90):
+                health += 8;
+                break;
+            case var expression when (repentance >= 90 && repentance <= 100):
+                health += 10;
                 break;
         }
     }

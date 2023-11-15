@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class gameOverButtons : MonoBehaviour
 {
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
     public void restartGame()
     {
         SceneManager.LoadScene("Title Screen");

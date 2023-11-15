@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 3
-  enemyDamage: 5
+  enemyDamage: 15
   repentanceOnShot: 5
   repentanceOnKill: 10
   attackCooldown: 3

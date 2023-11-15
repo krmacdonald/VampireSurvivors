@@ -676,6 +676,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!143 &437349506 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 7684448115704963612, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
+  m_PrefabInstance: {fileID: 872981378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &465456550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4946987035913740673, guid: f71c6a28e99d1894ea6c6167cf7da3db, type: 3}
@@ -1395,6 +1400,7 @@ MonoBehaviour:
   numEnemies: 15
   curEnemies: 0
   text: {fileID: 875457853}
+  healthGetter: {fileID: 437349495}
 --- !u!4 &817390331
 Transform:
   m_ObjectHideFlags: 0
@@ -1431,6 +1437,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6936905350416660936, guid: e80c3f1595be9d64b8c88c5849075461, type: 3}
     - target: {fileID: 2695406985360471630, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
+      propertyPath: healthGetter
+      value: 
+      objectReference: {fileID: 437349495}
+    - target: {fileID: 2695406985360471630, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
       propertyPath: crosshairDirector
       value: 
       objectReference: {fileID: 1189391131}
@@ -1438,6 +1448,10 @@ PrefabInstance:
       propertyPath: invisibleBulletTrail
       value: 
       objectReference: {fileID: 1638483754}
+    - target: {fileID: 5337690090297383661, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
+      propertyPath: healthGetter
+      value: 
+      objectReference: {fileID: 437349495}
     - target: {fileID: 5595976317043787704, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1450,6 +1464,10 @@ PrefabInstance:
       propertyPath: border
       value: 
       objectReference: {fileID: 1451123284}
+    - target: {fileID: 6225092209497564134, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
+      propertyPath: charCC
+      value: 
+      objectReference: {fileID: 437349506}
     - target: {fileID: 6225092209497564134, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
       propertyPath: healthRegen
       value: 3
@@ -2889,6 +2907,10 @@ PrefabInstance:
     - target: {fileID: 2452331909972367358, guid: f71c6a28e99d1894ea6c6167cf7da3db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352438694162081834, guid: f71c6a28e99d1894ea6c6167cf7da3db, type: 3}
+      propertyPath: m_Speed
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4946987035913740673, guid: f71c6a28e99d1894ea6c6167cf7da3db, type: 3}
       propertyPath: m_Name

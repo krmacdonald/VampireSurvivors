@@ -25,6 +25,7 @@ public class gunScript : MonoBehaviour
     public PlayableDirector crosshairDirector;
     public GameObject invisibleBulletTrail;
     public GameObject bulletTrail;
+    public playerLifeManager healthGetter;
     AudioSource m_shootingsound;
 
     void Start()
@@ -34,27 +35,29 @@ public class gunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        if (Input.GetMouseButtonDown(0)) //m1 detection
+
+        if (healthGetter.isAlive)
         {
-            if (gunDelay > gunFirerate) //Checks if gun is ready to fire
+            if (Input.GetMouseButtonDown(0)) //m1 detection
             {
-                m_shootingsound.Play();
-                gunDelay = 0;
-                director.Stop(); //stops current timeline if still playing
-                director.Play(); //creates muzzle 
-                RaycastHit rayHit; //sends out raycast
-                Shake(3f, 5f); //camera shake (not functional)
-                Instantiate(bulletTrail, invisibleBulletTrail.transform.position, invisibleBulletTrail.transform.rotation);
-                if (Physics.Raycast(camTransform.position, camTransform.forward, out rayHit)) 
+                if (gunDelay > gunFirerate) //Checks if gun is ready to fire
                 {
-                    if (rayHit.collider.gameObject.tag == "Enemy")
+                    m_shootingsound.Play();
+                    gunDelay = 0;
+                    director.Stop(); //stops current timeline if still playing
+                    director.Play(); //creates muzzle 
+                    RaycastHit rayHit; //sends out raycast
+                    Shake(3f, 5f); //camera shake (not functional)
+                    Instantiate(bulletTrail, invisibleBulletTrail.transform.position, invisibleBulletTrail.transform.rotation);
+                    if (Physics.Raycast(camTransform.position, camTransform.forward, out rayHit))
                     {
-                        crosshairDirector.Stop();
-                        crosshairDirector.Play();
-                        enemyScript = rayHit.collider.gameObject.GetComponent<basicEnemyBehavior>(); //grabs the enemy's script
-                        playerLife.addRepentance(enemyScript.takeDamage(gunDamage)); //broadcasts gundamage to enemy's takedamage method, returns repentance
+                        if (rayHit.collider.gameObject.tag == "Enemy")
+                        {
+                            crosshairDirector.Stop();
+                            crosshairDirector.Play();
+                            enemyScript = rayHit.collider.gameObject.GetComponent<basicEnemyBehavior>(); //grabs the enemy's script
+                            playerLife.addRepentance(enemyScript.takeDamage(gunDamage)); //broadcasts gundamage to enemy's takedamage method, returns repentance
+                        }
                     }
                 }
             }

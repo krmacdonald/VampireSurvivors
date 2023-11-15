@@ -25,6 +25,7 @@ public class basicEnemyBehavior : MonoBehaviour
     private Vector3 bloodPos;
     private playerLifeManager playerLife;
     private winConditionCounter winCounter;
+    private playerLifeManager playerAlive;
     [SerializeField] private NavMeshAgent agent;
     AudioSource m_shootingssound;
 
@@ -33,6 +34,7 @@ public class basicEnemyBehavior : MonoBehaviour
     {
         m_shootingssound = GetComponent<AudioSource>();
         player = GameObject.Find("Player");
+        playerAlive = player.GetComponent<playerLifeManager>();
         winCounter = GameObject.Find("Win Manager").GetComponent<winConditionCounter>();
         foreach(Transform t in transform)
         {
@@ -44,16 +46,19 @@ public class basicEnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) <= 45f && attackCDCounter >= attackCooldown)
+        if (playerAlive.isAlive)
         {
-            agent.SetDestination(player.transform.position);
+            if (Vector3.Distance(transform.position, player.transform.position) <= 45f && attackCDCounter >= attackCooldown)
+            {
+                agent.SetDestination(player.transform.position);
+            }
+            if (Vector3.Distance(transform.position, player.transform.position) <= 3f && attackCDCounter >= attackCooldown)
+            {
+                attackPlayer();
+                attackCDCounter = 0;
+            }
+            attackCDCounter += Time.deltaTime;
         }
-        if(Vector3.Distance(transform.position, player.transform.position) <= 3f && attackCDCounter >= attackCooldown)
-        {
-            attackPlayer();
-            attackCDCounter = 0;
-        }
-        attackCDCounter += Time.deltaTime;
     }
 
     //Causes the enemy to take damage, returns repentance value to the player.

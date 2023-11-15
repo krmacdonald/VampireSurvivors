@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class characterMovement : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class characterMovement : MonoBehaviour
 	private bool sprint = false;
 
 	public float verticalSpeed;
-
+	private void Start()
+    {
+		CC.enabled = true;
+    }
 	private void Update()
 	{
 		//handles x/z axes movement
@@ -46,6 +50,10 @@ public class characterMovement : MonoBehaviour
 		{
 			Application.Quit();
 			Debug.Log("quitting");
+		}
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+			SceneManager.LoadScene("AreaOne");
 		}
 	}
 	private void OnTriggerEnter(Collider other){

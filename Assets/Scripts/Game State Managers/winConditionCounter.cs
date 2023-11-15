@@ -10,6 +10,7 @@ public class winConditionCounter : MonoBehaviour
     public int curEnemies;
     public GameObject text;
     private TextMeshProUGUI actualText;
+    public playerLifeManager healthGetter;
     void Start()
     {
         actualText = text.GetComponent<TextMeshProUGUI>();
@@ -19,7 +20,14 @@ public class winConditionCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        actualText.text = "Cultists Purged\n" + curEnemies + " / " + numEnemies;
+        if (healthGetter.isAlive)
+        {
+            actualText.text = "Cultists Purged\n" + curEnemies + " / " + numEnemies;
+        }
+        else
+        {
+            actualText.text = "REST IN PEACE\n Press R to try again";
+        }
         if(numEnemies == curEnemies)
         {
             endGame();

@@ -20,12 +20,16 @@ public class playerLifeManager : MonoBehaviour
     private float regeneration;
     public Image border;
     public AudioSource grunt;
+    public CharacterController charCC;
+    public bool isAlive;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 100;
         border.color = new Color(1, 1, 1, 0);
+        isAlive = true;
+        repentance = 0;
     }
 
     // Update is called once per frame
@@ -57,38 +61,41 @@ public class playerLifeManager : MonoBehaviour
     //handles the regeneration of health based on repentace value using switch case
     public void repentanceRegen() 
     {
-        switch (repentance)
+        if (isAlive)
         {
-            case var expression when (repentance >= 0 && repentance < 10):
-                health += 0;
-                break;
-            case var expression when (repentance >= 10 && repentance < 20):
-                health += 1;
-                break;
-            case var expression when (repentance >= 20 && repentance < 30):
-                health += 2;
-                break;
-            case var expression when (repentance >= 30 && repentance < 40):
-                health += 3;
-                break;
-            case var expression when (repentance >= 40 && repentance < 50):
-                health += 4;
-                break;
-            case var expression when (repentance >= 50 && repentance < 60):
-                health += 5;
-                break;
-            case var expression when (repentance >= 60 && repentance < 70):
-                health += 6;
-                break;
-            case var expression when (repentance >= 70 && repentance < 80):
-                health += 7;
-                break;
-            case var expression when (repentance >= 80 && repentance < 90):
-                health += 8;
-                break;
-            case var expression when (repentance >= 90 && repentance <= 100):
-                health += 10;
-                break;
+            switch (repentance)
+            {
+                case var expression when (repentance >= 0 && repentance < 10):
+                    health += 0;
+                    break;
+                case var expression when (repentance >= 10 && repentance < 20):
+                    health += 1;
+                    break;
+                case var expression when (repentance >= 20 && repentance < 30):
+                    health += 2;
+                    break;
+                case var expression when (repentance >= 30 && repentance < 40):
+                    health += 3;
+                    break;
+                case var expression when (repentance >= 40 && repentance < 50):
+                    health += 4;
+                    break;
+                case var expression when (repentance >= 50 && repentance < 60):
+                    health += 5;
+                    break;
+                case var expression when (repentance >= 60 && repentance < 70):
+                    health += 6;
+                    break;
+                case var expression when (repentance >= 70 && repentance < 80):
+                    health += 7;
+                    break;
+                case var expression when (repentance >= 80 && repentance < 90):
+                    health += 8;
+                    break;
+                case var expression when (repentance >= 90 && repentance <= 100):
+                    health += 10;
+                    break;
+            }
         }
     }
 
@@ -105,13 +112,16 @@ public class playerLifeManager : MonoBehaviour
     //enemies call this function with their damage var to hurt the player
     public void takeDamage(float damageTaken)
     {
-        grunt.Play();
-        health -= damageTaken;
-        StartCoroutine(FadeImage(true));
-        if (health < 0)
+        if (isAlive)
         {
-            health = 0;
-            handleDeath();
+            grunt.Play();
+            health -= damageTaken;
+            StartCoroutine(FadeImage(true));
+            if (health < 0)
+            {
+                health = 0;
+                handleDeath();
+            }
         }
     }
 
@@ -129,8 +139,11 @@ public class playerLifeManager : MonoBehaviour
     }
     //script to handle game over/player reset, maybe respawn enemies
     public void handleDeath() 
-    { 
-
+    {
+        charCC.enabled = false;
+        isAlive = false;
+        transform.position -= new Vector3(0f, 2f, 0);
+        border.color = new Color(1, 1, 1, 1);
     }
 
     public void addRepentance(float repentanceAdded)

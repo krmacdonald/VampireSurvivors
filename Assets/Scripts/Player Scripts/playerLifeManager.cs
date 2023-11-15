@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*
  * Last edited by Kyle 11/5/23
@@ -17,11 +18,14 @@ public class playerLifeManager : MonoBehaviour
     public float healthRegen;
     private float healthRegenTimer;
     private float regeneration;
+    public Image border;
+    public AudioSource grunt;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 100;
+        border.color = new Color(1, 1, 1, 0);
     }
 
     // Update is called once per frame
@@ -101,7 +105,9 @@ public class playerLifeManager : MonoBehaviour
     //enemies call this function with their damage var to hurt the player
     public void takeDamage(float damageTaken)
     {
+        grunt.Play();
         health -= damageTaken;
+        StartCoroutine(FadeImage(true));
         if (health < 0)
         {
             health = 0;
@@ -109,6 +115,18 @@ public class playerLifeManager : MonoBehaviour
         }
     }
 
+    IEnumerator FadeImage(bool fadeAway)
+    {
+        if (fadeAway)
+        {
+            for (float i = 1; i >= 0; i -= Time.deltaTime/3)
+            {
+                // set color with i as alpha
+                border.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+        }
+    }
     //script to handle game over/player reset, maybe respawn enemies
     public void handleDeath() 
     { 

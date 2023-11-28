@@ -31,7 +31,9 @@ public class weaponEquipManager : MonoBehaviour
             {
                 currentWeapon += 1f;
             }
-        }else if(Input.GetAxis("Mouse ScrollWheel") < 0f)
+            handleEquipped();
+        }
+        else if(Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             if (currentWeapon == 0)
             {
@@ -41,29 +43,44 @@ public class weaponEquipManager : MonoBehaviour
             {
                 currentWeapon -= 1f;
             }
+            handleEquipped();
         }
         if (Input.GetKeyDown("1"))
         {
             currentWeapon = 0;
-        }else if (Input.GetKeyDown("2"))
+            handleEquipped();
+        }
+        else if (Input.GetKeyDown("2"))
         {
             currentWeapon = 1;
-        }else if (Input.GetKeyDown("3"))
+            handleEquipped();
+        }
+        else if (Input.GetKeyDown("3"))
         {
             currentWeapon = 2;
+            handleEquipped();
         }
-        handleEquipped();
     }
 
     void handleEquipped()
     {
-        if(currentWeapon == 0)
+        switch (currentWeapon)
         {
-            pistol.SetActive(true);
-        }
-        else
-        {
-            pistol.SetActive(false);
+            case 0:
+                pistol.SetActive(true);
+                shotgun.SetActive(false);
+                grenade.SetActive(false);
+                break;
+            case 1:
+                pistol.SetActive(false);
+                shotgun.SetActive(true);
+                grenade.SetActive(false);
+                break;
+            case 2:
+                pistol.SetActive(false);
+                shotgun.SetActive(false);
+                grenade.SetActive(true);
+                break;
         }
     }
 }

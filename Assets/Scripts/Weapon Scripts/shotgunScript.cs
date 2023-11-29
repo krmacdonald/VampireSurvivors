@@ -9,6 +9,7 @@ public class shotgunScript : MonoBehaviour
     public float fireSpeed;
     private float fireSpeedDelay;
     public AudioSource fireSound;
+    public playerLifeManager healthGetter;
 
     void Start()
     {
@@ -18,6 +19,12 @@ public class shotgunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (healthGetter.isAlive)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+
+            }
+        }
     }
 }

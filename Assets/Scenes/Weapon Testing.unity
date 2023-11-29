@@ -184,7 +184,8 @@ PrefabInstance:
       value: NEW HUD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3455982387194312165, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}
@@ -1038,6 +1039,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 43830090782413611, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
+      propertyPath: m_InitialState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 557160032664346119, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
       propertyPath: m_Mesh
       value: 

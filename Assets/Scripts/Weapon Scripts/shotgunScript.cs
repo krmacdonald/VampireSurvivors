@@ -13,7 +13,7 @@ public class shotgunScript : MonoBehaviour
 
     void Start()
     {
-        
+        fireSpeedDelay = 0;
     }
 
     // Update is called once per frame
@@ -23,7 +23,10 @@ public class shotgunScript : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-
+                if(fireSpeedDelay > fireSpeed)
+                {
+                    fireSpeedDelay = 0;
+                }
             }
         }
     }

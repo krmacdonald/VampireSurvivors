@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class grenadeLauncher : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject grenadePrefab;
+    public float firerate;
+    private float firerateTimer = 0;
+
+
     void Start()
     {
-        
+        firerateTimer = 0;
     }
 
     // Update is called once per frame

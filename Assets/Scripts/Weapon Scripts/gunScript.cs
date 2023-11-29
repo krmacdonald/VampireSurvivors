@@ -32,6 +32,7 @@ public class gunScript : MonoBehaviour
     {
         m_shootingsound = GetComponent<AudioSource>();
         director.Play();
+        gunDelay = 0;
     }
     // Update is called once per frame
     void Update()

@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 194931699}
   - component: {fileID: 194931698}
   - component: {fileID: 194931697}
+  - component: {fileID: 194931700}
   m_Layer: 0
   m_Name: shotgun placeholder
   m_TagString: Untagged
@@ -618,6 +619,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194931695}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &194931700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194931695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68054853a7f959b429ef5ce62cb00fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamage: 0
+  projectileAmount: 0
+  fireSpeed: 0
+  fireSound: {fileID: 0}
+  healthGetter: {fileID: 0}
 --- !u!320 &268192311 stripped
 PlayableDirector:
   m_CorrespondingSourceObject: {fileID: 1602838561002741292, guid: ebcc44f7baafd6243b63944527c213aa, type: 3}
@@ -640,6 +658,7 @@ GameObject:
   - component: {fileID: 492278260}
   - component: {fileID: 492278259}
   - component: {fileID: 492278258}
+  - component: {fileID: 492278262}
   m_Layer: 0
   m_Name: Grenade placeholder
   m_TagString: Untagged
@@ -733,6 +752,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 933840907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492278262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492278257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49a17b60317bb44ea8ac0439ba9b194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 0}
+  firerate: 0
 --- !u!1 &681928132
 GameObject:
   m_ObjectHideFlags: 0

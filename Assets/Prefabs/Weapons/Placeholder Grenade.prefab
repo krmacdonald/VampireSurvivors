@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7657524888506783698}
   - component: {fileID: 2759769721476580664}
   - component: {fileID: 6595064090140382524}
+  - component: {fileID: -1549970554325333986}
   m_Layer: 0
   m_Name: Placeholder Grenade
   m_TagString: Untagged
@@ -133,3 +134,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1549970554325333986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427355200736804553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a950f243f75c3c14294de3bd9bdd87cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToExplode: 0.5
+  explosionPrefab: {fileID: 6570573640227183301, guid: c6d23fbd129ee4c4a9ba0a3e93f99836, type: 3}

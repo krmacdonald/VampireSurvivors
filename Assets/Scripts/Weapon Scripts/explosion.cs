@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class explosion : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float explosionDecay;
+    private float explosionCounter;
     void Start()
     {
         
@@ -13,6 +14,10 @@ public class explosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        explosionCounter += Time.deltaTime;
+        if(explosionCounter > explosionDecay)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

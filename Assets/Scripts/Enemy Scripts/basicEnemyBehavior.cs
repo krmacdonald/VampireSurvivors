@@ -35,7 +35,7 @@ public class basicEnemyBehavior : MonoBehaviour
         m_shootingssound = GetComponent<AudioSource>();
         player = GameObject.Find("Player");
         playerAlive = player.GetComponent<playerLifeManager>();
-        winCounter = GameObject.Find("Win Manager").GetComponent<winConditionCounter>();
+        //winCounter = GameObject.Find("Win Manager").GetComponent<winConditionCounter>();
         foreach(Transform t in transform)
         {
             t.gameObject.tag = "Enemy";

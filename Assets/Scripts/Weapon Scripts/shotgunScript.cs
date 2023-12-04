@@ -10,9 +10,11 @@ public class shotgunScript : MonoBehaviour
     private float fireSpeedDelay;
     public AudioSource fireSound;
     public playerLifeManager healthGetter;
+    AudioSource m_shootingsound;
 
     void Start()
     {
+        m_shootingsound = GetComponent<AudioSource>();
         fireSpeedDelay = 0;
     }
 
@@ -25,6 +27,7 @@ public class shotgunScript : MonoBehaviour
             {
                 if(fireSpeedDelay > fireSpeed)
                 {
+                    m_shootingsound.Play();
                     fireSpeedDelay = 0;
                 }
             }

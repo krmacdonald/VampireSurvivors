@@ -10,14 +10,16 @@ public class explosion : MonoBehaviour
     private basicEnemyBehavior enemyScript;
     private Vector3 launchDirection;
     public playerLifeManager playerLife;
+    AudioSource m_shootingsound;
     void Start()
     {
-        
+        AudioSource m_shootingsound;
     }
 
     // Update is called once per frame
     void Update()
     {
+        AudioSource m_shootingsound;
         explosionCounter += Time.deltaTime;
         if(explosionCounter > explosionDecay)
         {

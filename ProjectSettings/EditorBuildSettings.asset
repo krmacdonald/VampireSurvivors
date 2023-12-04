@@ -8,13 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/First Area.unity
     guid: 32cf8c90c7483374884dd3b7aad9cf86
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Title Screen.unity
     guid: 3f9f816c48a554142aa439cb26af881b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AreaOne.unity
     guid: ae48775a14563da4094a0581cc435871
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Victory Screen.unity
     guid: b5f3c68b5328afe459a8ec9902ea0c66
+  - enabled: 1
+    path: Assets/Scenes/GraveyardVer1.unity
+    guid: a2d44793406b8eb40b85ea3b4433c186
   m_configObjects: {}

@@ -29,13 +29,15 @@ public class explosion : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             launchDirection = transform.position - other.gameObject.transform.position;
-        }else if(other.tag == "Enemy")
+        }
+        else if (other.tag == "Enemy")
         {
             enemyScript = other.gameObject.GetComponent<basicEnemyBehavior>();
             playerLife.addRepentance(enemyScript.takeDamage(explosionDamage));
+            Debug.Log("Damaged");
         }
     }
 }

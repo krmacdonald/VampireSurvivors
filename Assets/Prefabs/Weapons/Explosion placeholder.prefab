@@ -224,4 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216c35db3ae33304f8df8dee762cd81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionDamage: 15
   explosionDecay: 2
+  playerLife: {fileID: 0}

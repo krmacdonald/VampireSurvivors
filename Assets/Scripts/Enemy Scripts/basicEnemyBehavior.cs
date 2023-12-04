@@ -87,7 +87,7 @@ public class basicEnemyBehavior : MonoBehaviour
 
     public void handleDeath()
     {
-        winCounter.addEnemies(1);
+        //winCounter.addEnemies(1);
         bloodPos = this.transform.position;
         bloodRotate = this.transform.rotation;
         Instantiate(blood, bloodPos, bloodRotate);

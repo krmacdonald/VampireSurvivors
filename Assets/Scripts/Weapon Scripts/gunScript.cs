@@ -30,7 +30,7 @@ public class gunScript : MonoBehaviour
     void Start()
     {
         m_shootingsound = GetComponent<AudioSource>();
-        gunDelay = 0;
+        gunDelay = gunFirerate;
         playerLife = GameObject.Find("Player").GetComponent<playerLifeManager>();
     }
     // Update is called once per frame

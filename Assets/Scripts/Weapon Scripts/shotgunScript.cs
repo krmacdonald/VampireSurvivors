@@ -19,7 +19,7 @@ public class shotgunScript : MonoBehaviour
     void Start()
     {
         m_shootingsound = GetComponent<AudioSource>();
-        fireSpeedDelay = 0;
+        fireSpeedDelay = fireSpeed;
         healthGetter = GameObject.Find("Player").GetComponent<playerLifeManager>();
     }
 

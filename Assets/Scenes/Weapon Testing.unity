@@ -350,7 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDamage: 5
   projectileAmount: 0
-  fireSpeed: 2
+  fireSpeed: 1.5
   fireSound: {fileID: 89492721}
   healthGetter: {fileID: 0}
   invisBulletPrefab: {fileID: 450754350}
@@ -1290,7 +1290,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6136567045605999161, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8242286425742410596, guid: 5f152a4803f858b4a9fe5fdd0c0bbe7a, type: 3}
     m_AddedGameObjects:

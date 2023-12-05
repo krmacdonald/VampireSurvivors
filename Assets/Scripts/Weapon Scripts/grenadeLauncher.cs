@@ -8,7 +8,7 @@ public class grenadeLauncher : MonoBehaviour
     public float firerate;
     private float firerateTimer = 0;
     private GameObject instantiatedGrenade;
-    public playerLifeManager healthGetter;
+    private playerLifeManager healthGetter;
     public float grenadeLaunchSpeed;
     private Rigidbody grenadeRigidbody;
     public Transform camTrans;
@@ -19,6 +19,7 @@ public class grenadeLauncher : MonoBehaviour
     {
         AudioSource m_shootingsound;
         firerateTimer = 0;
+        healthGetter = GameObject.Find("Player").GetComponent<playerLifeManager>();
     }
 
     // Update is called once per frame

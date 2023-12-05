@@ -14,6 +14,7 @@ public class explosion : MonoBehaviour
     void Start()
     {
         AudioSource m_shootingsound;
+        playerLife = GameObject.Find("Player").GetComponent<playerLifeManager>();
     }
 
     // Update is called once per frame

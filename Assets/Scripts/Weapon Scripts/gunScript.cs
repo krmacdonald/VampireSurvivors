@@ -17,10 +17,9 @@ public class gunScript : MonoBehaviour
     public float gunDamage;
     public float gunFirerate;
     private float gunDelay;
-    public int magazine;
     public float reloadSpeed;
     private basicEnemyBehavior enemyScript;
-    public playerLifeManager playerLife;
+    private playerLifeManager playerLife;
     public PlayableDirector director;
     public PlayableDirector crosshairDirector;
     public GameObject invisibleBulletTrail;
@@ -33,6 +32,7 @@ public class gunScript : MonoBehaviour
         m_shootingsound = GetComponent<AudioSource>();
         director.Play();
         gunDelay = 0;
+        playerLife = GameObject.Find("Player").GetComponent<playerLifeManager>();
     }
     // Update is called once per frame
     void Update()

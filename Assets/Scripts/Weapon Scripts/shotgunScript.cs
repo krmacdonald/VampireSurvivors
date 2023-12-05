@@ -16,6 +16,7 @@ public class shotgunScript : MonoBehaviour
     {
         m_shootingsound = GetComponent<AudioSource>();
         fireSpeedDelay = 0;
+        healthGetter = GameObject.Find("Player").GetComponent<playerLifeManager>();
     }
 
     // Update is called once per frame

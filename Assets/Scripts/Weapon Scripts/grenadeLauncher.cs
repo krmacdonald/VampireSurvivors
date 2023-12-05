@@ -12,12 +12,11 @@ public class grenadeLauncher : MonoBehaviour
     public float grenadeLaunchSpeed;
     private Rigidbody grenadeRigidbody;
     public Transform camTrans;
-    AudioSource m_shootingsound;
+    public AudioSource m_shootingsound;
 
 
     void Start()
     {
-        AudioSource m_shootingsound;
         firerateTimer = 0;
         healthGetter = GameObject.Find("Player").GetComponent<playerLifeManager>();
     }
@@ -32,7 +31,7 @@ public class grenadeLauncher : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    AudioSource m_shootingsound;
+                    m_shootingsound.Play();
                     fireGrenade();
                     firerateTimer = 0;
                 }

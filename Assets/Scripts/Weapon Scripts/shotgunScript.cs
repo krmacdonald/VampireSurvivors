@@ -14,7 +14,7 @@ public class shotgunScript : MonoBehaviour
     public GameObject invisBulletPrefab;
     public GameObject bulletsPrefab;
     public PlayableDirector flashDirector;
-    AudioSource m_shootingsound;
+    private AudioSource m_shootingsound;
 
     void Start()
     {

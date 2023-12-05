@@ -10,17 +10,16 @@ public class explosion : MonoBehaviour
     private basicEnemyBehavior enemyScript;
     private Vector3 launchDirection;
     public playerLifeManager playerLife;
-    AudioSource m_shootingsound;
+    public AudioSource m_shootingsound;
     void Start()
     {
-        AudioSource m_shootingsound;
+        m_shootingsound.Play();
         playerLife = GameObject.Find("Player").GetComponent<playerLifeManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        AudioSource m_shootingsound;
         explosionCounter += Time.deltaTime;
         if(explosionCounter > explosionDecay)
         {

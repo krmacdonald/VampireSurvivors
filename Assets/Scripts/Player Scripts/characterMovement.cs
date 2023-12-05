@@ -53,7 +53,7 @@ public class characterMovement : MonoBehaviour
 		}
         if (Input.GetKeyDown(KeyCode.R))
         {
-			SceneManager.LoadScene("AreaOne");
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
 	private void OnTriggerEnter(Collider other){

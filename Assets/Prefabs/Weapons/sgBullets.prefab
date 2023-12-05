@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 7145638305530205055}
   - component: {fileID: 3501130897816659602}
   - component: {fileID: 4961492549628360288}
+  - component: {fileID: 5073742679382433438}
   m_Layer: 0
   m_Name: Bullet2
   m_TagString: Untagged
@@ -489,6 +490,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &5073742679382433438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5188661701605169580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6a1a7bedc5fc4c8dba7fc22d4309f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthGetter: {fileID: 0}
+  damage: 2
 --- !u!1 &5291997895068459198
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +601,7 @@ GameObject:
   - component: {fileID: 8708373314310220829}
   - component: {fileID: 1633906306410830724}
   - component: {fileID: 6289283580723256232}
+  - component: {fileID: 4420693713492036994}
   m_Layer: 0
   m_Name: Bullet1
   m_TagString: Untagged
@@ -812,6 +828,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &4420693713492036994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5748364578100883356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6a1a7bedc5fc4c8dba7fc22d4309f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthGetter: {fileID: 0}
+  damage: 2
 --- !u!1 &5876592169441429344
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +856,7 @@ GameObject:
   - component: {fileID: 4823676686329279986}
   - component: {fileID: 634082742360086394}
   - component: {fileID: 4831790890598221633}
+  - component: {fileID: 5067329320883279585}
   m_Layer: 0
   m_Name: Bullet4
   m_TagString: Untagged
@@ -1052,6 +1083,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &5067329320883279585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876592169441429344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6a1a7bedc5fc4c8dba7fc22d4309f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthGetter: {fileID: 0}
+  damage: 2
 --- !u!1 &6082778628073379782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1111,7 @@ GameObject:
   - component: {fileID: 7496054003012936351}
   - component: {fileID: 8922976816074799875}
   - component: {fileID: 4022275929203379482}
+  - component: {fileID: 3938906424219637464}
   m_Layer: 0
   m_Name: Bullet3
   m_TagString: Untagged
@@ -1292,6 +1338,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &3938906424219637464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6082778628073379782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6a1a7bedc5fc4c8dba7fc22d4309f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthGetter: {fileID: 0}
+  damage: 2
 --- !u!1 &7063231742106289957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1366,7 @@ GameObject:
   - component: {fileID: 8711551518736574689}
   - component: {fileID: 1829610365939413563}
   - component: {fileID: 8516027154835011159}
+  - component: {fileID: 3286258819921813237}
   m_Layer: 0
   m_Name: Bullet5
   m_TagString: Untagged
@@ -1532,6 +1593,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &3286258819921813237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063231742106289957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6a1a7bedc5fc4c8dba7fc22d4309f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthGetter: {fileID: 0}
+  damage: 2
 --- !u!1 &7785297233402094853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1704,7 @@ GameObject:
   - component: {fileID: 8028495190946990515}
   - component: {fileID: 6413968320630190952}
   - component: {fileID: 5699824328803655174}
+  - component: {fileID: 8661218348319387659}
   m_Layer: 0
   m_Name: Bullet6
   m_TagString: Untagged
@@ -1855,6 +1931,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &8661218348319387659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818182313618593274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6a1a7bedc5fc4c8dba7fc22d4309f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthGetter: {fileID: 0}
+  damage: 2
 --- !u!1 &8219959434048340601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +2042,7 @@ GameObject:
   - component: {fileID: 6467949744202283338}
   - component: {fileID: 3406727860626104540}
   - component: {fileID: 4951344186401361848}
+  - component: {fileID: 455766591365579425}
   m_Layer: 0
   m_Name: Bullet7
   m_TagString: Untagged
@@ -2178,6 +2269,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &455766591365579425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9098737324212570096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d6a1a7bedc5fc4c8dba7fc22d4309f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthGetter: {fileID: 0}
+  damage: 2
 --- !u!1 &9099886256410159954
 GameObject:
   m_ObjectHideFlags: 0

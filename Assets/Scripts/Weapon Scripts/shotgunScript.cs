@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class shotgunScript : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class shotgunScript : MonoBehaviour
     public playerLifeManager healthGetter;
     public GameObject invisBulletPrefab;
     public GameObject bulletsPrefab;
+    public PlayableDirector flashDirector;
     AudioSource m_shootingsound;
 
     void Start()
@@ -31,6 +33,8 @@ public class shotgunScript : MonoBehaviour
             {
                 if(fireSpeedDelay > fireSpeed)
                 {
+                    flashDirector.Stop(); //stops current timeline if still playing
+                    flashDirector.Play(); //creates muzzle 
                     m_shootingsound.Play();
                     Instantiate(bulletsPrefab, invisBulletPrefab.transform.position, invisBulletPrefab.transform.rotation);
                     fireSpeedDelay = 0;

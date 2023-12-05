@@ -82,7 +82,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  timeAlive: 2
+  timeAlive: 1.5
 --- !u!1 &2485878131660423218
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -504,6 +504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthGetter: {fileID: 0}
   damage: 2
+  crossHair: {fileID: 0}
 --- !u!1 &5291997895068459198
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +767,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -842,6 +843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthGetter: {fileID: 0}
   damage: 2
+  crossHair: {fileID: 0}
 --- !u!1 &5876592169441429344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1023,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1097,6 +1099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthGetter: {fileID: 0}
   damage: 2
+  crossHair: {fileID: 0}
 --- !u!1 &6082778628073379782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1279,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1352,6 +1355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthGetter: {fileID: 0}
   damage: 2
+  crossHair: {fileID: 0}
 --- !u!1 &7063231742106289957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,7 +1535,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1607,6 +1611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthGetter: {fileID: 0}
   damage: 2
+  crossHair: {fileID: 0}
 --- !u!1 &7785297233402094853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,7 +1874,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1945,6 +1950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthGetter: {fileID: 0}
   damage: 2
+  crossHair: {fileID: 0}
 --- !u!1 &8219959434048340601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,7 +2213,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -2283,6 +2289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthGetter: {fileID: 0}
   damage: 2
+  crossHair: {fileID: 0}
 --- !u!1 &9099886256410159954
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class explosion : MonoBehaviour
     private Vector3 launchDirection;
     public playerLifeManager playerLife;
     public AudioSource m_shootingsound;
+    private bool damagedPlayer = false;
     void Start()
     {
         m_shootingsound.Play();
@@ -32,6 +33,12 @@ public class explosion : MonoBehaviour
         if (other.tag == "Player")
         {
             launchDirection = transform.position - other.gameObject.transform.position;
+            if (damagedPlayer == false)
+            {
+                playerLife.takeDamage(35);
+                Debug.Log("player ouched");
+                damagedPlayer = true;
+            }
         }
         else if (other.tag == "Enemy")
         {

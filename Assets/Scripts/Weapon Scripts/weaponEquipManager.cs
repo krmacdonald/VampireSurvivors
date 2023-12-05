@@ -12,53 +12,56 @@ public class weaponEquipManager : MonoBehaviour
     public GameObject pistol;
     public GameObject shotgun;
     public GameObject grenade;
-
+    private playerLifeManager healthGetter;
     void Start()
     {
-        
+        healthGetter = GameObject.Find("Player").GetComponent<playerLifeManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxis("Mouse ScrollWheel") > 0f)
+        if (healthGetter.isAlive)
         {
-            if(currentWeapon == numOfWeapons - 1)
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
             {
-                currentWeapon = 0f;
+                if (currentWeapon == numOfWeapons - 1)
+                {
+                    currentWeapon = 0f;
+                }
+                else
+                {
+                    currentWeapon += 1f;
+                }
+                handleEquipped();
             }
-            else
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
             {
-                currentWeapon += 1f;
+                if (currentWeapon == 0)
+                {
+                    currentWeapon = numOfWeapons - 1;
+                }
+                else
+                {
+                    currentWeapon -= 1f;
+                }
+                handleEquipped();
             }
-            handleEquipped();
-        }
-        else if(Input.GetAxis("Mouse ScrollWheel") < 0f)
-        {
-            if (currentWeapon == 0)
+            if (Input.GetKeyDown("1"))
             {
-                currentWeapon = numOfWeapons - 1;
+                currentWeapon = 0;
+                handleEquipped();
             }
-            else
+            else if (Input.GetKeyDown("2"))
             {
-                currentWeapon -= 1f;
+                currentWeapon = 1;
+                handleEquipped();
             }
-            handleEquipped();
-        }
-        if (Input.GetKeyDown("1"))
-        {
-            currentWeapon = 0;
-            handleEquipped();
-        }
-        else if (Input.GetKeyDown("2"))
-        {
-            currentWeapon = 1;
-            handleEquipped();
-        }
-        else if (Input.GetKeyDown("3"))
-        {
-            currentWeapon = 2;
-            handleEquipped();
+            else if (Input.GetKeyDown("3"))
+            {
+                currentWeapon = 2;
+                handleEquipped();
+            }
         }
     }
 

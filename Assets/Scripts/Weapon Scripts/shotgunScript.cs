@@ -33,12 +33,11 @@ public class shotgunScript : MonoBehaviour
             {
                 if(fireSpeedDelay > fireSpeed)
                 {
-                    flashDirector.Stop(); //stops current timeline if still playing
-                    flashDirector.Play(); //creates muzzle 
                     m_shootingsound.Play();
+                    flashDirector.Stop(); //stops current timeline if still playing
+                    flashDirector.Play(); //creates 
                     Instantiate(bulletsPrefab, invisBulletPrefab.transform.position, invisBulletPrefab.transform.rotation);
                     fireSpeedDelay = 0;
-                    Debug.Log("Firing");
                 }
             }
         }

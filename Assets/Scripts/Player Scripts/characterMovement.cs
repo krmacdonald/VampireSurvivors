@@ -12,9 +12,11 @@ public class characterMovement : MonoBehaviour
 	private bool sprint = false;
 
 	public float verticalSpeed;
+	private playerLifeManager healthGetter;
 	private void Start()
     {
 		CC.enabled = true;
+		healthGetter = this.GetComponent<playerLifeManager>();
     }
 	private void Update()
 	{
@@ -44,7 +46,10 @@ public class characterMovement : MonoBehaviour
 		movement += (transform.up * verticalSpeed * Time.deltaTime);
 
 		//moves the character controller
-		CC.Move(movement);
+		if (healthGetter.isAlive)
+		{
+			CC.Move(movement);
+		}
 
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{

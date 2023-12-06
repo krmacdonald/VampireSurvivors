@@ -6,6 +6,11 @@ public class grenade : MonoBehaviour
 {
     public GameObject explosionPrefab;
     private bool hasMade = false;
+
+    void FixedUpdate()
+    {
+
+    }
     void OnCollisionEnter(Collision collision)
     {
         ContactPoint contact = collision.contacts[0];

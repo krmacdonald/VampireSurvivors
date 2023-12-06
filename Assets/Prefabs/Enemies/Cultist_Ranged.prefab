@@ -896,6 +896,7 @@ MonoBehaviour:
   player: {fileID: 0}
   blood: {fileID: 3007723015506490982, guid: ddab2d1f1c337ce4ba7516eac842cb65, type: 3}
   ragPrefab: {fileID: 324327133376444105, guid: adc18101a2f773040b501dac6c537684, type: 3}
+  skeleAnim: {fileID: 0}
   agent: {fileID: 3352438694162081834}
 --- !u!195 &3352438694162081834
 NavMeshAgent:
@@ -1064,7 +1065,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 14
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &5108925875809395384
 GameObject:
   m_ObjectHideFlags: 0

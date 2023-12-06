@@ -27,6 +27,7 @@ public class basicEnemyBehavior : MonoBehaviour
     private winConditionCounter winCounter;
     private playerLifeManager playerAlive;
     public GameObject ragPrefab;
+    public Animator skeleAnim;
     private bool madeObject = false;
     [SerializeField] private NavMeshAgent agent;
     AudioSource m_shootingssound;
@@ -37,6 +38,7 @@ public class basicEnemyBehavior : MonoBehaviour
         m_shootingssound = GetComponent<AudioSource>();
         player = GameObject.Find("Player");
         playerAlive = player.GetComponent<playerLifeManager>();
+        skeleAnim = this.GetComponent<Animator>();
         //winCounter = GameObject.Find("Win Manager").GetComponent<winConditionCounter>();
         foreach(Transform t in transform)
         {
@@ -48,18 +50,32 @@ public class basicEnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (playerAlive.isAlive)
         {
             if (Vector3.Distance(transform.position, player.transform.position) <= 45f && attackCDCounter >= attackCooldown)
             {
                 agent.SetDestination(player.transform.position);
+                if (skeleAnim != null)
+                {
+                    skeleAnim.speed = 1.0f;
+                }
             }
             if (Vector3.Distance(transform.position, player.transform.position) <= 3f && attackCDCounter >= attackCooldown)
             {
                 attackPlayer();
+                if (skeleAnim != null)
+                {
+                    skeleAnim.speed = 0.0f;
+                }
+                transform.position = transform.position;
                 attackCDCounter = 0;
             }
             attackCDCounter += Time.deltaTime;
+            if(attackCDCounter < attackCooldown)
+            {
+                transform.position = transform.position;
+            }
         }
     }
 

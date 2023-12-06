@@ -385,7 +385,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &4961492549628360288
 TrailRenderer:
   serializedVersion: 3
@@ -724,7 +724,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &6289283580723256232
 TrailRenderer:
   serializedVersion: 3
@@ -980,7 +980,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &4831790890598221633
 TrailRenderer:
   serializedVersion: 3
@@ -1236,7 +1236,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &4022275929203379482
 TrailRenderer:
   serializedVersion: 3
@@ -1492,7 +1492,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &8516027154835011159
 TrailRenderer:
   serializedVersion: 3
@@ -1831,7 +1831,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &5699824328803655174
 TrailRenderer:
   serializedVersion: 3
@@ -2170,7 +2170,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &4951344186401361848
 TrailRenderer:
   serializedVersion: 3

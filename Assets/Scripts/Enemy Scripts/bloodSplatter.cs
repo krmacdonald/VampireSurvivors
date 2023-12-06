@@ -5,7 +5,7 @@ using UnityEngine;
 public class bloodSplatter : MonoBehaviour
 {
 
-    private float bloodLast = .7f;
+    private float bloodLast = .3f;
     private float bloodTimer = 0f;
     void Start()
     {

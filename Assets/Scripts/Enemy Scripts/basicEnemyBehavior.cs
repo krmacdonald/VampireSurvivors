@@ -66,6 +66,7 @@ public class basicEnemyBehavior : MonoBehaviour
     //Causes the enemy to take damage, returns repentance value to the player.
     public float takeDamage(float playerDamage)
     {
+        Debug.Log(playerDamage);
         if((int)Random.Range(1,4) == 2)
         {
             m_shootingssound.Play();

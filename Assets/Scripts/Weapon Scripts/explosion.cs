@@ -9,6 +9,7 @@ public class explosion : MonoBehaviour
     private float explosionCounter;
     private basicEnemyBehavior enemyScript;
     private Vector3 launchDirection;
+    private Rigidbody objectToLaunch;
     public playerLifeManager playerLife;
     public AudioSource m_shootingsound;
     private bool damagedPlayer = false;
@@ -45,6 +46,13 @@ public class explosion : MonoBehaviour
             enemyScript = other.gameObject.GetComponent<basicEnemyBehavior>();
             playerLife.addRepentance(enemyScript.takeDamage(explosionDamage));
             Debug.Log("Damaged");
+        }
+        else if(other.tag == "Ragdoll")
+        {
+            launchDirection = other.gameObject.transform.position - transform.position;
+            objectToLaunch = other.gameObject.GetComponent<Rigidbody>();
+            objectToLaunch.AddForce(launchDirection * 1000);
+            Debug.Log("launching");
         }
     }
 }

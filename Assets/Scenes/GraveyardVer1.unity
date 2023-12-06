@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0023996497, g: 0.00482394, b: 0.0023996497, a: 1}
+  m_IndirectSpecularColor: {r: 0.0019075164, g: 0.00482394, b: 0.0019075164, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1336,6 +1336,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1982831956949120542, guid: 0a600afab42e36c478572c05e533222b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6cf7497d2db22b449149a8654fa4789, type: 2}
     - target: {fileID: 2370007696947489997, guid: 0a600afab42e36c478572c05e533222b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1376,10 +1380,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3535871526941017069, guid: 0a600afab42e36c478572c05e533222b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6cf7497d2db22b449149a8654fa4789, type: 2}
+    - target: {fileID: 3879920604793263582, guid: 0a600afab42e36c478572c05e533222b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6cf7497d2db22b449149a8654fa4789, type: 2}
+    - target: {fileID: 4332803710938508686, guid: 0a600afab42e36c478572c05e533222b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6cf7497d2db22b449149a8654fa4789, type: 2}
+    - target: {fileID: 4501961777809792947, guid: 0a600afab42e36c478572c05e533222b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6cf7497d2db22b449149a8654fa4789, type: 2}
     - target: {fileID: 5194176456187486599, guid: 0a600afab42e36c478572c05e533222b, type: 3}
       propertyPath: m_Name
       value: GraveyardLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 6222327933166949048, guid: 0a600afab42e36c478572c05e533222b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6cf7497d2db22b449149a8654fa4789, type: 2}
+    - target: {fileID: 7290675207265592066, guid: 0a600afab42e36c478572c05e533222b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6cf7497d2db22b449149a8654fa4789, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

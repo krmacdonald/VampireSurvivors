@@ -73,7 +73,10 @@ public class basicEnemyBehavior : MonoBehaviour
         totalRepentance = 0;
         this.enemyHealth -= playerDamage;
         totalRepentance += repentanceOnShot;
-        if(this.enemyHealth <= 0){
+        bloodPos = this.transform.position;
+        bloodRotate = this.transform.rotation;
+        Instantiate(blood, bloodPos, bloodRotate);
+        if (this.enemyHealth <= 0){
             totalRepentance += repentanceOnKill;
             handleDeath();
         }
@@ -95,7 +98,6 @@ public class basicEnemyBehavior : MonoBehaviour
             madeObject = true;
             bloodPos = this.transform.position;
             bloodRotate = this.transform.rotation;
-            Instantiate(blood, bloodPos, bloodRotate);
             Instantiate(ragPrefab, bloodPos, bloodRotate);
             Destroy(this.gameObject);
         }

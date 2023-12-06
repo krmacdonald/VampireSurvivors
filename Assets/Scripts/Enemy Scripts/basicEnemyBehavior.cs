@@ -26,6 +26,8 @@ public class basicEnemyBehavior : MonoBehaviour
     private playerLifeManager playerLife;
     private winConditionCounter winCounter;
     private playerLifeManager playerAlive;
+    public GameObject ragPrefab;
+    private bool madeObject = false;
     [SerializeField] private NavMeshAgent agent;
     AudioSource m_shootingssound;
 
@@ -88,9 +90,14 @@ public class basicEnemyBehavior : MonoBehaviour
     public void handleDeath()
     {
         //winCounter.addEnemies(1);
-        bloodPos = this.transform.position;
-        bloodRotate = this.transform.rotation;
-        Instantiate(blood, bloodPos, bloodRotate);
-        Destroy(this.gameObject);
+        if (madeObject == false)
+        {
+            madeObject = true;
+            bloodPos = this.transform.position;
+            bloodRotate = this.transform.rotation;
+            Instantiate(blood, bloodPos, bloodRotate);
+            Instantiate(ragPrefab, bloodPos, bloodRotate);
+            Destroy(this.gameObject);
+        }
     }
 }

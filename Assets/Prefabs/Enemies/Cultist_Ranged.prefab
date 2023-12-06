@@ -894,6 +894,7 @@ MonoBehaviour:
   attackCooldown: 3
   player: {fileID: 0}
   blood: {fileID: 3007723015506490982, guid: ddab2d1f1c337ce4ba7516eac842cb65, type: 3}
+  ragPrefab: {fileID: 324327133376444105, guid: adc18101a2f773040b501dac6c537684, type: 3}
   agent: {fileID: 3352438694162081834}
 --- !u!195 &3352438694162081834
 NavMeshAgent:

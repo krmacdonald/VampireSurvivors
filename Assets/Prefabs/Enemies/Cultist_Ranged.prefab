@@ -888,6 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8537162d8929b3a4d8bc61726222b6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWinCondition: 1
   enemyHealth: 3
   enemyDamage: 15
   repentanceOnShot: 5

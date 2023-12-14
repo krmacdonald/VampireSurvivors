@@ -9,4 +9,13 @@ public class titleScreen : MonoBehaviour
     {
         SceneManager.LoadScene("AreaOne");
     }
+    public void startInstructions()
+    {
+        SceneManager.LoadScene("Instructions");
+        Debug.Log("kljadsf");
+    }
+    public void startLore()
+    {
+        SceneManager.LoadScene("Lore");
+    }
 }

@@ -12,6 +12,7 @@ using UnityEngine.AI;
 
 public class basicEnemyBehavior : MonoBehaviour
 {
+    public bool isWinCondition;
     public float enemyHealth;
     public float enemyDamage;
     public float repentanceOnShot;
@@ -39,7 +40,10 @@ public class basicEnemyBehavior : MonoBehaviour
         player = GameObject.Find("Player");
         playerAlive = player.GetComponent<playerLifeManager>();
         skeleAnim = this.GetComponent<Animator>();
-        //winCounter = GameObject.Find("Win Manager").GetComponent<winConditionCounter>();
+        if (isWinCondition)
+        {
+            winCounter = GameObject.Find("Win Manager").GetComponent<winConditionCounter>();
+        }
         foreach(Transform t in transform)
         {
             t.gameObject.tag = "Enemy";
@@ -109,7 +113,10 @@ public class basicEnemyBehavior : MonoBehaviour
 
     public void handleDeath()
     {
-        //winCounter.addEnemies(1);
+        if (isWinCondition)
+        {
+            winCounter.addEnemies(1);
+        }
         if (madeObject == false)
         {
             madeObject = true;

@@ -226,7 +226,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00099754, y: -0.00025177}
-  m_SizeDelta: {x: 900, y: 650}
+  m_SizeDelta: {x: 320, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571911627
 MonoBehaviour:
@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 1122187487}
   - component: {fileID: 1122187486}
   - component: {fileID: 1122187485}
+  - component: {fileID: 1122187488}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -452,6 +453,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1122187488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122187484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b70529ce9a2f73429235be75c292f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1471594290
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,8 +602,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.053955, y: -121.79756}
-  m_SizeDelta: {x: 203.1636, y: 261.9594}
+  m_AnchoredPosition: {x: 0, y: -121.79756}
+  m_SizeDelta: {x: 29.9, y: 292.5}
   m_Pivot: {x: 0.35985595, y: 0.43961716}
 --- !u!114 &1856253737
 MonoBehaviour:
@@ -612,10 +625,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' My name is Kevin Beckham, I am a priest. I followed my father''s footsteps
-    to become one. Sadly, It was a wrong choice. Coming back to this chruch brings
-    so many memories, but these cultist was summon something I couldn''t comprehend.
-    Lord, please forgive what I''m about to do. '
+  m_text: " My name is Kevin Beckham, I am a priest.\n\nI followed my father's footsteps
+    to \nbecome one. \nGoing down such a path was harrowing \n\nComing back to this
+    church brings \nback so many horrid memories, \nbut these cultists have summoned
+    something \nI can't comprehend, nor allow to live\n\nLord, please forgive what
+    I'm about to do. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e5d34205d8ec4784ba5bba46a41cc18b, type: 2}
   m_sharedMaterial: {fileID: -8538740840773319545, guid: e5d34205d8ec4784ba5bba46a41cc18b, type: 2}
@@ -642,8 +656,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

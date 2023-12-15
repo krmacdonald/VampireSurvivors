@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 24de1d31e491da94390efaae6c815254, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 94.92
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 24de1d31e491da94390efaae6c815254, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -34.297222
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 24de1d31e491da94390efaae6c815254, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.24
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 24de1d31e491da94390efaae6c815254, type: 3}
       propertyPath: m_LocalRotation.w
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8537162d8929b3a4d8bc61726222b6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWinCondition: 0
   enemyHealth: 10
   enemyDamage: 3
   repentanceOnShot: 3
@@ -195,7 +196,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 170915db883c7dd4a82c02629331d330, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

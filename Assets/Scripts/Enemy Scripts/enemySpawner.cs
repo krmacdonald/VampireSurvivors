@@ -22,6 +22,7 @@ public class enemySpawner : MonoBehaviour
         {
             enemySpawnTimer = 0;
             Instantiate(enemyPrefab, enemySpawns[(int)(Random.Range(0, 4))]);
+            Debug.Log("spawning");
         }
     }
 }

@@ -41,6 +41,6 @@ public class winConditionCounter : MonoBehaviour
 
     public void endGame()
     {
-        SceneManager.LoadScene("Victory Screen");
+        SceneManager.LoadScene("AreaTransition");
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " My name is Kevin Beckham, I am a priest.\n\nI followed my father's footsteps
+  m_text: "My name is Kevin Beckham, I am a priest.\n\nI followed my father's footsteps
     to \nbecome one. \nGoing down such a path was harrowing \n\nComing back to this
     church brings \nback so many horrid memories, \nbut these cultists have summoned
     something \nI can't comprehend, nor allow to live\n\nLord, please forgive what
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290207542
-  m_fontColor: {r: 0.21238874, g: 0.37098, b: 0.7169812, a: 1}
+    rgba: 4291548159
+  m_fontColor: {r: 1, g: 0.8276596, b: 0.7971698, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

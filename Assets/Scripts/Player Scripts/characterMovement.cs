@@ -56,7 +56,7 @@ public class characterMovement : MonoBehaviour
 			Application.Quit();
 			Debug.Log("quitting");
 		}
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.R))
         {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}

@@ -9,21 +9,30 @@ public class graveyardTimer : MonoBehaviour
     public GameObject thingWithText;
     public TextMeshProUGUI timerText;
     private float timePassed;
+    public playerLifeManager lifeGetter;
     // Start is called before the first frame update
     void Start()
     {
         timerText = thingWithText.GetComponent<TextMeshProUGUI>();
+        timePassed = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timePassed += Time.deltaTime;
-        timerText.text = "" + (int)(timeToSurvive - timePassed);
-
-        if(timePassed > timeToSurvive)
+        if (lifeGetter.isAlive)
         {
-            SceneManager.LoadScene("Victory Screen");
+            timePassed += Time.deltaTime;
+            timerText.text = "" + (int)(timeToSurvive - timePassed);
+
+            if (timePassed > timeToSurvive)
+            {
+                SceneManager.LoadScene("Victory Screen");
+            }
+        }
+        else
+        {
+            timerText.text = "YOU DIED\nPRESS R TO RESTART";
         }
     }
 }

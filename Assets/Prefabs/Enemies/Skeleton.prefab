@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWinCondition: 0
   enemyHealth: 10
-  enemyDamage: 3
+  enemyDamage: 5
   repentanceOnShot: 3
   repentanceOnKill: 5
   attackCooldown: 2
